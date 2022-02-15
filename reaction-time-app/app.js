@@ -2,7 +2,6 @@ const body = document.querySelector("body");
 const bolt = document.querySelector(".bolt");
 
 let currentState = 0;
-const backButton = `<button id='home-btn' onclick="location.href = '../index.html#projects-header'"><i class='fas fa-arrow-left'></i>Back</button>`;
 const colors = ["hsl(0, 90%, 55%)", "hsl(120, 80%, 45%)", "hsl(200, 80%, 60%)"];
 const states = [
   "<div class='container clickable'><button class='trans-btn'><i class='fas fa-ellipsis-h dots'></i></button><div class='text-container'><h1 class='header'>Wait for Green</h1></div></div>",
@@ -11,7 +10,7 @@ const states = [
 ];
 
 function changeState() {
-  body.innerHTML = backButton + states[currentState];
+  body.innerHTML = states[currentState];
   document.body.style.backgroundColor = colors[currentState];
   currentState++;
 }
@@ -26,19 +25,19 @@ async function getData() {
 
 function loadModals(result) {
   // Load initial modal elements
-  var modal = document.getElementById("modal");
-  var modalContent = document.querySelector(".modal-content");
-  var submitModalBtn = document.querySelector(".submit-btn");
-  var highscoreModalBtn = document.querySelector(".highscore-btn");
+  let modal = document.getElementById("modal");
+  let modalContent = document.querySelector(".modal-content");
+  let submitModalBtn = document.querySelector(".submit-btn");
+  let highscoreModalBtn = document.querySelector(".highscore-btn");
 
   // Loads all submitModal components
   submitModalBtn.onclick = function () {
     modalContent.innerHTML =
       "<form><label for='name'>Name: </label><input id='inputField'></input></form><p class='result-value'></p><button class='final-submit-btn'>Submit</button>";
 
-    var inputField = document.getElementById("inputField");
-    var resultValue = document.querySelector(".result-value");
-    var submitBtn = document.querySelector(".final-submit-btn");
+    let inputField = document.getElementById("inputField");
+    let resultValue = document.querySelector(".result-value");
+    let submitBtn = document.querySelector(".final-submit-btn");
 
     resultValue.innerText = "Score: " + result + "ms";
     modal.style.display = "block";

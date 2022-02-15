@@ -16,6 +16,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--primary-green);
 }
@@ -106,7 +110,7 @@ body {
   display: inline-block;
   background-color: var(--white);
 
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   margin: 5px;
   border-radius: 5%;
 
@@ -117,7 +121,7 @@ body {
 }
 
 #skills li:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
 }
 
 /*PROJECTS*/
@@ -131,16 +135,50 @@ body {
   text-align: right;
 }
 
+#projects h3 {
+  font-size: 2rem;
+}
+
+#projects p {
+  margin: 0 20px;
+}
+
 #projects-grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
 .project {
   border: solid var(--primary-green);
+  border-radius: 10px;
   height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
   text-align: center;
+}
+
+.project-visit-btn {
+  background-color: transparent;
+  color: var(--primary-green);
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  padding: 15px 45px;
+  border: 2px solid var(--primary-green);
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+.project-visit-btn:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
 }
 
 /*MEDIA QUERIES*/
@@ -173,6 +211,11 @@ body {
 
   #projects-grid {
     grid-template-columns: auto;
+  }
+
+  .project-visit-btn {
+    background-color: var(--primary-green);
+    color: var(--white);
   }
 }
 
