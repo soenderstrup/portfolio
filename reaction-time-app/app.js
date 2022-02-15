@@ -2,6 +2,7 @@ const body = document.querySelector("body");
 const bolt = document.querySelector(".bolt");
 
 let currentState = 0;
+const backButton = `<button id='home-btn' onclick="location.href = '../index.html#projects-header'"><i class='fas fa-arrow-left'></i>Back</button>`;
 const colors = ["hsl(0, 90%, 55%)", "hsl(120, 80%, 45%)", "hsl(200, 80%, 60%)"];
 const states = [
   "<div class='container clickable'><button class='trans-btn'><i class='fas fa-ellipsis-h dots'></i></button><div class='text-container'><h1 class='header'>Wait for Green</h1></div></div>",
@@ -10,7 +11,7 @@ const states = [
 ];
 
 function changeState() {
-  body.innerHTML = states[currentState];
+  body.innerHTML = backButton + states[currentState];
   document.body.style.backgroundColor = colors[currentState];
   currentState++;
 }
