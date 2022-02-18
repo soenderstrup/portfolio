@@ -3,6 +3,7 @@
 /*GENERAL*/
 :root {
   --primary-green: rgb(66, 124, 61);
+  --focus-green: rgb(47, 102, 42);
   --white: white;
   --container-spacing: 5rem;
   --h2-fs: 4vw;
@@ -58,10 +59,8 @@ body {
 }
 
 .icon:hover {
-  background-color: rgb(41, 95, 37);
-  background-color: rgb(47, 102, 42);
+  background-color: var(--focus-green);
 }
-/*background-color: rgb(47, 102, 42);*/
 
 /*HERO*/
 #hero {
@@ -79,7 +78,7 @@ body {
 
 #hero-img img {
   width: 100%;
-  animation: slide-down 0.8s forwards;
+  animation: slide-up var(--hero-animation-duration) ease forwards;
 }
 
 #hero-text h1 {
@@ -263,9 +262,9 @@ body {
 }
 
 /*KEYFRAMES*/
-@keyframes slide-down {
+@keyframes slide-up {
   from {
-    transform: translateY(-400px);
+    transform: translateY(800px);
     opacity: 0;
   }
 
