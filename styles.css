@@ -28,6 +28,41 @@ body {
   font-size: var(--h2-fs);
 }
 
+/*NAVBAR*/
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: var(--container-spacing);
+  right: var(--container-spacing);
+}
+
+#navbar h2 {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.icon {
+  background: transparent;
+  color: var(--white);
+  font-size: 3rem;
+
+  border: none;
+  border-radius: 20px;
+  margin: 20px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+.icon:hover {
+  background-color: rgb(41, 95, 37);
+  background-color: rgb(47, 102, 42);
+}
+/*background-color: rgb(47, 102, 42);*/
+
 /*HERO*/
 #hero {
   text-align: center;
@@ -35,7 +70,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  margin: 0 var(--container-spacing) 0 var(--container-spacing);
+  margin: 0 var(--container-spacing);
 }
 
 #hero-img {
@@ -186,6 +221,14 @@ body {
   :root {
     --h2-fs: 8vw;
     --container-spacing: 2rem;
+  }
+
+  #navbar {
+    justify-content: center;
+  }
+
+  #name {
+    display: none;
   }
 
   #hero-text h1 {

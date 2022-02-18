@@ -6,10 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="script.js" defer></script>
     <title>Mads Sønderstrup-Jensen</title>
   </head>
   <body>
+    <!--NAVBAR-->
+    <nav id="navbar">
+      <h2 id="name">MADS SØNDERSTRUP-JENSEN</h2>
+      <div id="links">
+        <button id="linked-in" class="icon">
+          <i class="fab fa-linkedin fa-fw"></i>
+        </button>
+        <button id="github" class="icon">
+          <i class="fab fa-github fa-fw"></i>
+        </button>
+      </div>
+    </nav>
+
     <!--HERO-->
     <div id="hero">
       <div id="hero-img">
@@ -95,19 +115,28 @@
 
     <!--PROJECTS-->
     <div id="projects">
-        <h2 id="projects-header" class="section-header">PROJECTS</h2>
-        <div id="projects-grid">
-            <div class="project">
-                <h3>Reaction Time</h3>
-                <p>Made purely by HTML5, CSS3 and JavaScript, this responsive website lets you measure your reaction time and compare it to others.</p>
-                <button id="reaction-time-btn" class="project-visit-btn">Visit</button>
-            </div>
-            <div class="project">
-                <h3>Weather app</h3>
-                <p>Made with the well-known frontend framework React and using a weather API, this responsive website enables you to look up the current weather conditions of any city.</p>
-                <button id="weather-app-btn" class="project-visit-btn">Visit</button> 
-            </div>
+      <h2 id="projects-header" class="section-header">PROJECTS</h2>
+      <div id="projects-grid">
+        <div class="project">
+          <h3>Reaction Time</h3>
+          <p>
+            Made purely by HTML5, CSS3 and JavaScript, this responsive website
+            lets you measure your reaction time and compare it to others.
+          </p>
+          <button id="reaction-time-btn" class="project-visit-btn">
+            Visit
+          </button>
         </div>
+        <div class="project">
+          <h3>Weather app</h3>
+          <p>
+            Made with the well-known frontend framework React and using a
+            weather API, this responsive website enables you to look up the
+            current weather conditions of any city.
+          </p>
+          <button id="weather-app-btn" class="project-visit-btn">Visit</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
