@@ -2,8 +2,8 @@
 
 /*GENERAL*/
 :root {
-  --primary-green: rgb(66, 124, 61);
-  --focus-green: rgb(47, 102, 42);
+  --primary-color: #1f395a;
+  --focus-primary-color: #324d70;
   --white: white;
   --container-spacing: 5rem;
   --h2-fs: 4vw;
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: var(--primary-green);
+  background-color: var(--primary-color);
 }
 
 .section-header {
@@ -59,7 +59,7 @@ body {
 }
 
 .icon:hover {
-  background-color: var(--focus-green);
+  background-color: var(--focus-primary-color);
 }
 
 /*HERO*/
@@ -78,7 +78,7 @@ body {
 
 #hero-img img {
   width: 100%;
-  animation: slide-up var(--hero-animation-duration) ease forwards;
+  animation: slide-up 0.8s ease forwards;
 }
 
 #hero-text h1 {
@@ -99,31 +99,43 @@ body {
   animation: typing var(--hero-animation-duration) forwards, blink 1s infinite;
 }
 
+/*ABOUT-SKILLS*/
+#about-skills {
+  display: flex;
+}
+
 /*ABOUT*/
 #about {
   background-color: var(--white);
   padding: var(--container-spacing);
+
+  width: 50%;
+  border-top-right-radius: 50px;
 }
 
 #about h2 {
-  color: var(--primary-green);
-}
-
-#about-text {
-  columns: 2;
-  column-width: 350px;
-  column-gap: 80px;
+  color: var(--primary-color);
 }
 
 /*SKILLS*/
+#skills-wrapper {
+  background-color: var(--white);
+  width: 50%;
+}
+
 #skills {
+  background-color: var(--primary-color);
   text-align: center;
   padding: var(--container-spacing);
+
+  height: 100%;
+  border-bottom-left-radius: 50px;
 }
 
 #skills-flex {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 #skills h2 {
@@ -136,7 +148,7 @@ body {
 
 #skills ul {
   display: block;
-  max-width: 500px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -165,8 +177,8 @@ body {
 }
 
 #projects h2 {
-  color: var(--primary-green);
-  text-align: right;
+  color: var(--primary-color);
+  text-align: center;
 }
 
 #projects h3 {
@@ -184,7 +196,7 @@ body {
 }
 
 .project {
-  border: solid var(--primary-green);
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
   height: 300px;
 
@@ -198,12 +210,12 @@ body {
 
 .project-visit-btn {
   background-color: transparent;
-  color: var(--primary-green);
+  color: var(--primary-color);
   font-size: 1.5rem;
   font-weight: 500;
 
-  padding: 15px 45px;
-  border: 2px solid var(--primary-green);
+  padding: 10px 45px;
+  border: 2px solid var(--primary-color);
   border-radius: 30px;
   cursor: pointer;
 
@@ -211,7 +223,7 @@ body {
 }
 
 .project-visit-btn:hover {
-  background-color: var(--primary-green);
+  background-color: var(--primary-color);
   color: var(--white);
 }
 
@@ -242,13 +254,19 @@ body {
     display: none;
   }
 
-  #about h2,
-  #projects h2 {
-    text-align: center;
+  #about-skills {
+    flex-direction: column;
   }
 
-  #skills-flex {
-    flex-direction: column;
+  #about,
+  #skills-wrapper,
+  #skills {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  #about h2 {
+    text-align: center;
   }
 
   #projects-grid {
@@ -256,7 +274,7 @@ body {
   }
 
   .project-visit-btn {
-    background-color: var(--primary-green);
+    background-color: var(--primary-color);
     color: var(--white);
   }
 }
