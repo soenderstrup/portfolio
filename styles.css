@@ -371,6 +371,23 @@ textarea {
   }
 }
 
+@keyframes bounce {
+  50%,
+  80%,
+  to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+}
+
 /*THANKS*/
 #thanks {
   width: 100%;
@@ -389,4 +406,6 @@ textarea {
   font-size: 5rem;
   margin: 3rem;
   color: var(--white);
+
+  animation: 1s bounce linear;
 }
