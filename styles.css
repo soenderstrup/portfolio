@@ -8,6 +8,7 @@
   --white: white;
   --container-spacing: 5rem;
   --h2-fs: 4vw;
+  --border-curve: 150px;
   --hero-animation-duration: 1.3s;
   --hover-transition-duration: 0.2s;
 }
@@ -88,7 +89,7 @@ body {
 
 #hero-text h1 {
   color: var(--white);
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 500;
 }
 
@@ -119,7 +120,7 @@ body {
   padding: var(--container-spacing);
 
   width: 50%;
-  border-top-right-radius: 50px;
+  border-top-right-radius: var(--border-curve);
 }
 
 #about h2 {
@@ -138,7 +139,7 @@ body {
   padding: var(--container-spacing);
 
   height: 100%;
-  border-bottom-left-radius: 50px;
+  border-bottom-left-radius: var(--border-curve);
 }
 
 #skills-flex {
