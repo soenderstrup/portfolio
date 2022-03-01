@@ -109,6 +109,10 @@ body {
   display: flex;
 }
 
+#about-skills h3 {
+  margin-top: 1rem;
+}
+
 /*ABOUT*/
 #about {
   background-color: var(--white);
