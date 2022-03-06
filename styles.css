@@ -79,7 +79,7 @@ body {
 }
 
 #hero-img {
-  width: 30vw;
+  width: 27vw;
 }
 
 #hero-img img {
@@ -240,6 +240,7 @@ body {
 /*CONTACT*/
 #contact {
   padding: var(--container-spacing) 20vw;
+  height: 100vh;
 }
 
 #contact-header {
@@ -259,6 +260,7 @@ body {
 }
 
 input[type="text"],
+input[type="email"],
 textarea {
   width: 100%;
   padding: 12px;
