@@ -208,7 +208,7 @@ body {
 .project {
   border: 2px solid var(--primary-color);
   border-radius: 10px;
-  height: 300px;
+  min-height: 300px;
 
   display: flex;
   flex-direction: column;
