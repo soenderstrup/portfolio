@@ -16,3 +16,15 @@ document.getElementById("reaction-time-btn").onclick = function () {
 document.getElementById("weather-app-btn").onclick = function () {
   window.open("/weather-app", "_blank");
 };
+
+document.getElementById("todo-app-btn").onclick = function () {
+  window.open("/todo-app", "_blank");
+};
+
+document.getElementById("portfolio-github-btn").onclick = function () {
+  window.open("https://github.com/Mads-SJ/portfolio", "_blank");
+};
+
+document.getElementById("todo-app-github-btn").onclick = function () {
+  window.open("https://github.com/Mads-SJ/todo-react-app", "_blank");
+};
