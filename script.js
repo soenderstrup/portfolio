@@ -29,6 +29,10 @@ document.getElementById("portfolio-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/portfolio", "_blank");
 };
 
+document.getElementById("reaction-time-github-btn").onclick = function () {
+  window.open("https://github.com/Mads-SJ/fullstack-reaction-time", "_blank");
+};
+
 document.getElementById("weather-app-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/react-weather-app", "_blank");
 };
