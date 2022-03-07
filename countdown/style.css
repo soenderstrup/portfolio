@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  background-image: url("./baloons.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 30vh 5rem 0 5rem;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 3rem;
+}
+
+.big-text {
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-el {
+  text-align: center;
+}
+
+span {
+  font-size: 1.3rem;
+}
+
+@media (max-width: 1250px) {
+  body {
+    background-image: url(./mobile-bg.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    margin-top: 20vh;
+    font-size: 2.5rem;
+  }
+
+  .big-text {
+    font-size: 4rem;
+  }
+}
