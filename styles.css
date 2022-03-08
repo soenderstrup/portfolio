@@ -292,6 +292,40 @@ textarea {
   background-color: #6f9bd4;
 }
 
+/*BACK TO TOP BUTTON*/
+#top-btn {
+  display: none;
+  opacity: 0;
+
+  font-size: 2rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--white);
+
+  cursor: pointer;
+  transition: var(--hover-transition-duration) ease-in-out;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#top-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  animation: 0.25s enter both;
+}
+
+.hidden {
+  animation: 0.25s exit both;
+}
+
 /*MEDIA QUERIES*/
 @media (max-width: 768px) {
   :root {
@@ -346,6 +380,10 @@ textarea {
   #contact {
     padding: var(--container-spacing);
   }
+
+  #top-btn {
+    right: 7px;
+  }
 }
 
 /*KEYFRAMES*/
@@ -393,6 +431,27 @@ textarea {
   }
   90% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
 
