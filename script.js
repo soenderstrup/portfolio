@@ -1,3 +1,4 @@
+/*NAVBAR*/
 document.getElementById("linked-in").onclick = function () {
   window.open(
     "https://www.linkedin.com/in/mads-s%C3%B8nderstrup-jensen-025309225/",
@@ -9,8 +10,9 @@ document.getElementById("github").onclick = function () {
   window.open("https://github.com/Mads-SJ", "_blank");
 };
 
+/*PROJECTS*/
 document.getElementById("reaction-time-btn").onclick = function () {
-  window.open("/reaction-time-app", "_blank");
+  window.open("/reaction-time", "_blank");
 };
 
 document.getElementById("weather-app-btn").onclick = function () {
@@ -36,7 +38,7 @@ document.getElementById("portfolio-github-btn").onclick = function () {
 };
 
 document.getElementById("reaction-time-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/fullstack-reaction-time", "_blank");
+  window.open("https://github.com/Mads-SJ/reaction-time", "_blank");
 };
 
 document.getElementById("weather-app-github-btn").onclick = function () {
