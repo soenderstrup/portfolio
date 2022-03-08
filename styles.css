@@ -290,6 +290,11 @@ textarea {
   background-color: #6f9bd4;
 }
 
+#copyright {
+  color: var(--white);
+  text-align: center;
+}
+
 /*BACK TO TOP BUTTON*/
 #top-btn {
   display: none;
