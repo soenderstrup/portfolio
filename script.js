@@ -56,3 +56,29 @@ document.getElementById("tip-calculator-github-btn").onclick = function () {
 document.getElementById("countdown-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/birthday-countdown", "_blank");
 };
+
+/*BACK TO TOP BUTTON*/
+const topBtn = document.getElementById("top-btn");
+
+topBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+
+window.onscroll = () => {
+  const pixels = 1080;
+  if (
+    document.body.scrollTop > pixels ||
+    document.documentElement.scrollTop > pixels
+  ) {
+    if (!topBtn.classList.contains("active")) {
+      topBtn.className = "active";
+      topBtn.style.display = "block";
+    }
+  } else {
+    if (topBtn.classList.contains("active")) {
+      topBtn.className = "hidden";
+      setTimeout(() => (topBtn.style.display = "none"), 250);
+    }
+  }
+};
