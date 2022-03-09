@@ -9,6 +9,7 @@
   --container-spacing: 5rem;
   --h2-fs: 4vw;
   --border-curve: 150px;
+  --slideshow-width: 50vw;
   --hero-animation-duration: 1.3s;
   --hover-transition-duration: 0.2s;
 }
@@ -237,6 +238,46 @@ body {
   color: var(--white);
 }
 
+/*EXPERINCE*/
+#experience {
+  background-color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exp-slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.slide {
+  height: 200px;
+  width: var(--slideshow-width);
+  background-color: rgb(165, 126, 126);
+  color: var(--white);
+
+  display: none;
+
+  animation: 1s slide-right ease-in-out forwards;
+}
+
+.slide-btn {
+  border: none;
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+}
+
 /*CONTACT*/
 #contact {
   padding: var(--container-spacing) 20vw;
@@ -456,6 +497,15 @@ textarea {
   to {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
