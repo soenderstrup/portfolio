@@ -57,6 +57,34 @@ document.getElementById("countdown-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/birthday-countdown", "_blank");
 };
 
+/*SLIDESHOW*/
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+const dots = document.getElementsByClassName("dot");
+const length = slides.length;
+
+showSlide(slideIndex);
+
+function changeSlide(n) {
+  slideIndex += n;
+  showSlide(slideIndex);
+}
+
+function showSlide(index) {
+  slideIndex = index;
+  for (let i = 0; i < length; i++) {
+    slides[i].style.display = "none";
+    dots[i].classList.remove("dot-active");
+  }
+
+  if (slideIndex < 0) slideIndex = length - 1;
+  else if (slideIndex > length - 1) slideIndex = 0;
+
+  slides[slideIndex].style.display = "block";
+  dots[slideIndex].classList.add("dot-active");
+  console.log(slideIndex);
+}
+
 /*BACK TO TOP BUTTON*/
 const topBtn = document.getElementById("top-btn");
 

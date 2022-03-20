@@ -9,6 +9,7 @@
   --container-spacing: 5rem;
   --h2-fs: 4vw;
   --border-curve: 150px;
+  --slideshow-width: 50vw;
   --hero-animation-duration: 1.3s;
   --hover-transition-duration: 0.2s;
 }
@@ -31,6 +32,15 @@ body {
 
 .section-header {
   font-size: var(--h2-fs);
+}
+
+.line {
+  background-color: var(--primary-color);
+  height: 4px;
+  width: 65vw;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
 /*NAVBAR*/
@@ -239,6 +249,110 @@ body {
   color: var(--white);
 }
 
+/*EXPERINCE*/
+#experience {
+  padding: 0 var(--container-spacing) var(--container-spacing)
+    var(--container-spacing);
+  background-color: var(--white);
+}
+
+#experience-header {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#exp-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#exp-slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  min-height: 270px;
+  width: 60vw;
+  padding: 20px;
+  background-color: var(--white);
+
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  list-style: inside;
+
+  display: none;
+
+  animation: 0.5s slide-fade ease-in-out;
+}
+
+.slide h3 {
+  font-weight: 600;
+  margin: 1rem;
+}
+
+.date {
+  float: right;
+}
+
+.location {
+  display: block;
+  font-weight: 300;
+}
+
+.slide ul {
+  margin-bottom: 1rem;
+}
+
+.slide-btn {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: var(--primary-color);
+  color: white;
+
+  font-size: 2rem;
+  min-width: 50px;
+  height: 50px;
+
+  margin: 20px;
+
+  transition: var(--hover-transition-duration) ease-in-out;
+}
+
+.slide-btn:hover {
+  background-color: var(--focus-primary-color);
+}
+
+#dots {
+  text-align: center;
+  margin: 1rem;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+.dot-active {
+  background-color: var(--primary-color);
+}
+
 /*CONTACT*/
 #contact {
   padding: var(--container-spacing) 20vw;
@@ -383,6 +497,15 @@ textarea {
     color: var(--white);
   }
 
+  .date {
+    float: none;
+    display: block;
+  }
+
+  .slide-btn {
+    margin: 10px;
+  }
+
   #contact {
     padding: var(--container-spacing);
   }
@@ -458,6 +581,15 @@ textarea {
   to {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 
