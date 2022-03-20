@@ -467,6 +467,8 @@ textarea {
   #hero {
     flex-direction: column;
     justify-content: center;
+
+    overflow: unset;
   }
 
   #hero-img {
