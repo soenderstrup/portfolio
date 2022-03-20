@@ -75,6 +75,8 @@ body {
   align-items: center;
   height: 90vh;
   margin: 0 var(--container-spacing);
+
+  overflow: hidden;
 }
 
 #hero-img {
