@@ -6,10 +6,11 @@
   --focus-primary-color: #324d70;
   --vibrant-primary-color: #336ebb;
   --white: white;
+  --nice-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --container-spacing: 5rem;
   --h2-fs: 4vw;
   --border-curve: 150px;
-  --slideshow-width: 50vw;
   --hero-animation-duration: 1.3s;
   --hover-transition-duration: 0.2s;
 }
@@ -220,10 +221,7 @@ body {
 }
 
 .project {
-  /*border: 2px solid var(--primary-color);*/
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: var(--nice-box-shadow);
   border-radius: 10px;
   min-height: 300px;
 
@@ -269,12 +267,6 @@ body {
   color: var(--primary-color);
 }
 
-#exp-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #exp-slideshow {
   display: flex;
   justify-content: center;
@@ -288,7 +280,7 @@ body {
   background-color: var(--white);
 
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: var(--nice-box-shadow);
 
   display: none;
 
@@ -321,7 +313,7 @@ body {
   cursor: pointer;
 
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
 
   font-size: 2rem;
   min-width: 50px;
@@ -395,7 +387,7 @@ textarea {
 
 #submit-btn {
   background-color: var(--vibrant-primary-color);
-  color: white;
+  color: var(--white);
 
   width: 100%;
   padding: 12px 20px;
@@ -498,6 +490,10 @@ textarea {
     text-align: center;
   }
 
+  #skills {
+    padding: var(--container-spacing) 0;
+  }
+
   #projects-grid {
     grid-template-columns: auto;
   }
@@ -513,8 +509,16 @@ textarea {
     display: block;
   }
 
+  #experience {
+    padding: 0;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
   .slide-btn {
-    margin: 10px;
+    margin: 5px;
   }
 
   #contact {
