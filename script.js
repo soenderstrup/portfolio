@@ -82,7 +82,6 @@ function showSlide(index) {
 
   slides[slideIndex].style.display = "block";
   dots[slideIndex].classList.add("dot-active");
-  console.log(slideIndex);
 }
 
 /*BACK TO TOP BUTTON*/
