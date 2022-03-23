@@ -6,6 +6,8 @@
   --focus-primary-color: #324d70;
   --vibrant-primary-color: #336ebb;
   --white: white;
+  --nice-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   --container-spacing: 5rem;
   --h2-fs: 4vw;
   --border-curve: 150px;
@@ -33,21 +35,31 @@ body {
   font-size: var(--h2-fs);
 }
 
+.line {
+  background-color: var(--primary-color);
+  height: 4px;
+  width: 65vw;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
 /*NAVBAR*/
 #navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  left: var(--container-spacing);
-  right: var(--container-spacing);
+  height: 10vh;
+  padding: 0 var(--container-spacing);
 }
 
 #navbar h2 {
   color: var(--white);
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 
 .icon {
@@ -74,12 +86,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   margin: 0 var(--container-spacing);
+
+  overflow: hidden;
 }
 
 #hero-img {
-  width: 25vw;
+  width: 30vw;
 }
 
 #hero-img img {
@@ -91,6 +105,7 @@ body {
   color: var(--white);
   font-size: 5vw;
   font-weight: 500;
+  text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .typed-out-container {
@@ -206,7 +221,7 @@ body {
 }
 
 .project {
-  border: 2px solid var(--primary-color);
+  box-shadow: var(--nice-box-shadow);
   border-radius: 10px;
   min-height: 300px;
 
@@ -236,12 +251,111 @@ body {
 .project-visit-btn:hover {
   background-color: var(--primary-color);
   color: var(--white);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/*EXPERINCE*/
+#experience {
+  padding: 0 var(--container-spacing) var(--container-spacing)
+    var(--container-spacing);
+  background-color: var(--white);
+}
+
+#experience-header {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+#exp-slideshow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  min-height: 250px;
+  width: 60vw;
+  padding: 20px;
+  background-color: var(--white);
+
+  border-radius: 10px;
+  box-shadow: var(--nice-box-shadow);
+
+  display: none;
+
+  animation: 0.5s slide-fade ease-in-out;
+}
+
+.slide h3 {
+  font-weight: 600;
+  margin: 1rem;
+  margin-left: 0;
+}
+
+.date {
+  float: right;
+}
+
+.location {
+  display: block;
+  font-weight: 300;
+}
+
+.slide ul {
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.slide-btn {
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: var(--primary-color);
+  color: var(--white);
+
+  font-size: 2rem;
+  min-width: 50px;
+  height: 50px;
+
+  margin: 20px;
+
+  transition: var(--hover-transition-duration) ease-in-out;
+}
+
+.slide-btn:hover {
+  background-color: var(--focus-primary-color);
+}
+
+#dots {
+  text-align: center;
+  margin: 1rem;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+  background-color: var(--primary-color);
+}
+
+.dot-active {
+  background-color: var(--primary-color);
 }
 
 /*CONTACT*/
 #contact {
   padding: var(--container-spacing) 20vw;
-  height: 100vh;
 }
 
 #contact-header {
@@ -273,7 +387,7 @@ textarea {
 
 #submit-btn {
   background-color: var(--vibrant-primary-color);
-  color: white;
+  color: var(--white);
 
   width: 100%;
   padding: 12px 20px;
@@ -290,6 +404,45 @@ textarea {
 
 #submit-btn:hover {
   background-color: #6f9bd4;
+}
+
+#copyright {
+  color: var(--white);
+  text-align: center;
+}
+
+/*BACK TO TOP BUTTON*/
+#top-btn {
+  display: none;
+  opacity: 0;
+
+  font-size: 2rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--white);
+
+  cursor: pointer;
+  transition: var(--hover-transition-duration) ease-in-out;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#top-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  animation: 0.25s enter both;
+}
+
+.hidden {
+  animation: 0.25s exit both;
 }
 
 /*MEDIA QUERIES*/
@@ -312,11 +465,14 @@ textarea {
   }
 
   #hero {
+    flex-direction: column;
     justify-content: center;
+
+    overflow: unset;
   }
 
   #hero-img {
-    display: none;
+    width: 15rem;
   }
 
   #about-skills {
@@ -334,6 +490,10 @@ textarea {
     text-align: center;
   }
 
+  #skills {
+    padding: var(--container-spacing) 0;
+  }
+
   #projects-grid {
     grid-template-columns: auto;
   }
@@ -341,10 +501,32 @@ textarea {
   .project-visit-btn {
     background-color: var(--primary-color);
     color: var(--white);
+    font-size: 1rem;
+  }
+
+  .date {
+    float: none;
+    display: block;
+  }
+
+  #experience {
+    padding: 0;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  .slide-btn {
+    margin: 5px;
   }
 
   #contact {
     padding: var(--container-spacing);
+  }
+
+  #top-btn {
+    right: 7px;
   }
 }
 
@@ -393,6 +575,36 @@ textarea {
   }
   90% {
     transform: translateY(-4px);
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
 
