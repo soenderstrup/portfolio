@@ -9,12 +9,13 @@ class Dice {
     });
 
     this.element.addEventListener("click", () => {
-      if (this.element.classList.contains("rolling")) return;
       this.roll();
     });
   }
 
   roll() {
+    if (this.element.classList.contains("rolling")) return;
+
     this.getFace();
     this.element.classList.add("rolling");
   }
