@@ -1,6 +1,7 @@
 class Dice {
   constructor() {
     this.diceElement = this.createDiceElement();
+    this.roll();
 
     this.diceElement.addEventListener("animationend", () => {
       this.diceElement.classList.remove("rolling");
@@ -8,13 +9,13 @@ class Dice {
 
     this.diceElement.addEventListener("click", () => {
       this.roll();
+      createTimestamp();
     });
   }
 
   createDiceElement() {
     const diceElement = document.createElement("div");
     diceElement.classList.add("dice");
-    diceElement.innerHTML = this.getNewEyes(1);
     diceContainer.appendChild(diceElement);
     return diceElement;
   }
@@ -102,6 +103,7 @@ class Dice {
 const selector = document.getElementById("dice-selector");
 const diceContainer = document.getElementById("dice-container");
 const rollBtn = document.getElementById("roll-btn");
+const lastRolled = document.getElementById("last-rolled");
 let dices = [];
 
 function createDices(noOfDices) {
@@ -109,11 +111,25 @@ function createDices(noOfDices) {
     let dice = new Dice();
     dices.push(dice);
   }
+  createTimestamp();
 }
 
 function removeDices() {
   dices = [];
   diceContainer.innerHTML = "";
+}
+
+function createTimestamp() {
+  const date = new Date();
+  lastRolled.innerText = `last rolled: ${format(date.getDate())}/${format(
+    date.getMonth() + 1
+  )}/${date.getFullYear()} - ${format(date.getHours())}:${format(
+    date.getMinutes()
+  )}:${format(date.getSeconds())}`;
+}
+
+function format(number) {
+  return String(number).padStart(2, "0");
 }
 
 selector.addEventListener("change", () => {
@@ -126,6 +142,7 @@ rollBtn.addEventListener("click", () => {
   dices.forEach((dice) => {
     dice.roll();
   });
+  createTimestamp();
 });
 
 createDices(1);

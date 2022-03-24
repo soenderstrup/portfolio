@@ -71,15 +71,15 @@ section {
   justify-content: space-between;
 }
 
-.second-face .dot:nth-child(2) {
+.second-face .dot:nth-of-type(2) {
   align-self: flex-end;
 }
 
-.third-face .dot:nth-child(2) {
+.third-face .dot:nth-of-type(2) {
   align-self: center;
 }
 
-.third-face .dot:nth-child(3) {
+.third-face .dot:nth-of-type(3) {
   align-self: end;
 }
 
@@ -91,20 +91,16 @@ section {
   justify-content: space-between;
 }
 
-.fifth-face .column:nth-child(2) {
+.fifth-face .column:nth-of-type(2) {
   justify-content: center;
 }
 
 #roll-btn {
+  margin-top: 50px;
   padding: 1em 2em;
-
   font-size: 1rem;
 
   cursor: pointer;
-}
-
-.hidden {
-  display: none;
 }
 
 @keyframes fancyRoll {
