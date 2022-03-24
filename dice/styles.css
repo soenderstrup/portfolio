@@ -80,7 +80,7 @@ section {
 }
 
 .third-face .dot:nth-of-type(3) {
-  align-self: end;
+  align-self: flex-end;
 }
 
 .fourth-face .column,

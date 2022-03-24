@@ -103,7 +103,7 @@ class Dice {
 const selector = document.getElementById("dice-selector");
 const diceContainer = document.getElementById("dice-container");
 const rollBtn = document.getElementById("roll-btn");
-const lastRolled = document.getElementById("last-rolled");
+const lastRoll = document.getElementById("last-roll");
 let dices = [];
 
 function createDices(noOfDices) {
@@ -121,11 +121,11 @@ function removeDices() {
 
 function createTimestamp() {
   const date = new Date();
-  lastRolled.innerText = `last rolled: ${format(date.getDate())}/${format(
-    date.getMonth() + 1
-  )}/${date.getFullYear()} - ${format(date.getHours())}:${format(
+  lastRoll.innerText = `last roll: ${format(date.getHours())}:${format(
     date.getMinutes()
-  )}:${format(date.getSeconds())}`;
+  )}:${format(date.getSeconds())} - ${format(date.getDate())}/${format(
+    date.getMonth() + 1
+  )}/${date.getFullYear()}`;
 }
 
 function format(number) {
@@ -136,6 +136,7 @@ selector.addEventListener("change", () => {
   const noOfDices = selector.options[selector.selectedIndex].value;
   removeDices();
   createDices(noOfDices);
+  localStorage.noOfDices = noOfDices;
 });
 
 rollBtn.addEventListener("click", () => {
@@ -145,4 +146,9 @@ rollBtn.addEventListener("click", () => {
   createTimestamp();
 });
 
-createDices(1);
+if (localStorage.noOfDices) {
+  selector.selectedIndex = localStorage.noOfDices - 1;
+  createDices(localStorage.noOfDices);
+} else {
+  createDices(1);
+}
