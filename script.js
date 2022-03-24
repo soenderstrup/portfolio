@@ -11,15 +11,20 @@ document.getElementById("github").onclick = function () {
 };
 
 /*PROJECTS*/
+document.getElementById("dice-roller-btn").onclick = function () {
+  window.open("/dice", "_blank");
+};
+
 document.getElementById("reaction-time-btn").onclick = function () {
   window.open("/reaction-time", "_blank");
 };
 
+/*
 document.getElementById("weather-app-btn").onclick = function () {
   alert(
     "This app had to be taken down to hide the API key. The API key has been revoked. Please take a look at the code instead."
   );
-};
+};*/
 
 document.getElementById("todo-app-btn").onclick = function () {
   window.open("/todo-app", "_blank");
@@ -37,13 +42,17 @@ document.getElementById("portfolio-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/portfolio", "_blank");
 };
 
+document.getElementById("dice-roller-github-btn").onclick = function () {
+  window.open("https://github.com/Mads-SJ/dice-roller", "_blank");
+};
+
 document.getElementById("reaction-time-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/reaction-time", "_blank");
 };
 
-document.getElementById("weather-app-github-btn").onclick = function () {
+/*document.getElementById("weather-app-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/react-weather-app", "_blank");
-};
+};*/
 
 document.getElementById("todo-app-github-btn").onclick = function () {
   window.open("https://github.com/Mads-SJ/todo-react-app", "_blank");
