@@ -1,7 +1,7 @@
 /*NAVBAR*/
 document.getElementById("linked-in").onclick = function () {
   window.open(
-    "https://www.linkedin.com/in/mads-s%C3%B8nderstrup-jensen-025309225/",
+    "https://www.linkedin.com/in/mads-sj/",
     "_blank"
   );
 };
