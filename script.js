@@ -122,3 +122,15 @@ window.onscroll = () => {
 /*COPYRIGHT*/
 const year = new Date().getFullYear();
 document.getElementById("copyright").innerText = `© Copyright ${year}, Mads Sønderstrup-Jensen`;
+
+const greetingSpan = document.getElementById("greeting");
+const date = new Date();
+if (date.getHours() < 10) {
+  greetingSpan.innerText = "Good morning 🌄☕";
+} else if (date.getHours() < 18) {
+  greetingSpan.innerText = "Hi👋";
+} else if (date.getHours() < 22) {
+  greetingSpan.innerText = "Good evening 🌆";
+} else {
+  greetingSpan.innerText = "Hey night owl 🦉";
+}

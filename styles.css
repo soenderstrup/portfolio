@@ -95,7 +95,7 @@ body {
 #hero-text h1 {
   color: var(--white);
   font-size: 5vw;
-  font-weight: 500;
+  font-weight: 400;
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -109,6 +109,10 @@ body {
   white-space: nowrap;
   width: 0;
   animation: typing var(--hero-animation-duration) forwards, blink 1s infinite;
+}
+
+.span-bold {
+  font-weight: 500;
 }
 
 /*ABOUT-SKILLS*/
