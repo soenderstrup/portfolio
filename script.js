@@ -118,3 +118,7 @@ window.onscroll = () => {
     }
   }
 };
+
+/*COPYRIGHT*/
+const year = new Date().getFullYear();
+document.getElementById("copyright").innerText = `© Copyright ${year}, Mads Sønderstrup-Jensen`;

@@ -2,9 +2,9 @@
 
 /*GENERAL*/
 :root {
-  --primary-color: #1f395a;
-  --focus-primary-color: #324d70;
-  --vibrant-primary-color: #336ebb;
+  --primary-color: #274fa9;
+  --focus-primary-color: #4669bc;
+  --vibrant-primary-color: #305dd1;
   --white: white;
   --nice-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -232,13 +232,13 @@ body {
 .project-visit-btn {
   background-color: transparent;
   color: var(--primary-color);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
 
   margin: 5px;
-  padding: 10px 45px;
+  padding: 5px 30px;
   border: 2px solid var(--primary-color);
-  border-radius: 30px;
+  border-radius: 5px;
   cursor: pointer;
 
   transition: 0.15s ease-in-out;
@@ -403,7 +403,7 @@ textarea {
 }
 
 #copyright {
-  color: var(--white);
+  background-color: var(--white);
   text-align: center;
 }
 
