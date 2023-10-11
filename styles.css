@@ -84,21 +84,12 @@ body {
 #hero {
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 90vh;
   margin: 0 var(--container-spacing);
 
   overflow: hidden;
-}
-
-#hero-img {
-  width: 30vw;
-}
-
-#hero-img img {
-  width: 100%;
-  animation: slide-up 0.8s ease forwards;
 }
 
 #hero-text h1 {
@@ -245,7 +236,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
 
-  transition: 0.2s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
 .project-visit-btn:hover {
@@ -461,7 +452,7 @@ textarea {
   }
 
   #hero-text h1 {
-    font-size: 10vw;
+    font-size: 35px;
   }
 
   #hero {
