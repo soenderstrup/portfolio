@@ -125,7 +125,7 @@ document.getElementById("copyright").innerText = `© Copyright ${year}, Mads Sø
 
 const greetingSpan = document.getElementById("greeting");
 const date = new Date();
-if (date.getHours() < 10) {
+if (date.getHours() > 6 && date.getHours() < 10) {
   greetingSpan.innerText = "Good morning 🌄☕";
 } else if (date.getHours() < 18) {
   greetingSpan.innerText = "Hi👋";
