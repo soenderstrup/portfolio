@@ -134,3 +134,37 @@ if (date.getHours() > 6 && date.getHours() < 10) {
 } else {
   greetingSpan.innerText = "Hey night owl 🦉";
 }
+
+const typedOutSpan = document.getElementById("typed-out");
+const texts = ["a Software Developer.", "a Student.", "Chess enthusiast."]
+
+let i = 0;
+let wordIndex = 0;
+let speed = 100;
+function writeText(text) {
+  if (i < text.length) {
+    typedOutSpan.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(writeText, speed, text);
+  } else {
+    if (wordIndex === texts.length - 1) wordIndex = 0;
+    else wordIndex++;
+    document.getElementById("text-cursor").classList.add("text-cursor-blink");
+    setTimeout(deleteText, 5000); 
+  }
+};
+
+function deleteText() {
+  document.getElementById("text-cursor").classList.remove("text-cursor-blink");
+  const typedOutSpanText = typedOutSpan.innerText;
+  if (i > 0) {
+    typedOutSpan.innerHTML = typedOutSpanText.substring(0, i - 1);
+    i--;
+    setTimeout(deleteText, speed / 2, typedOutSpanText);
+  } else {
+
+    writeText(texts[wordIndex]);
+  }
+}
+
+writeText(texts[wordIndex]);
