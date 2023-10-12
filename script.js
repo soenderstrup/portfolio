@@ -127,7 +127,11 @@ const greetingSpan = document.getElementById("greeting");
 const date = new Date();
 if (date.getHours() > 6 && date.getHours() < 10) {
   greetingSpan.innerText = "Good morning";
+  greetingSpan.innerText = "Good morning";
 } else if (date.getHours() < 18) {
+  greetingSpan.innerText = "Hi";
+} else if (date.getHours() < 24) {
+  greetingSpan.innerText = "Good evening";
   greetingSpan.innerText = "Hi";
 } else if (date.getHours() < 24) {
   greetingSpan.innerText = "Good evening";
