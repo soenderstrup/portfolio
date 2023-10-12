@@ -126,31 +126,38 @@ document.getElementById("copyright").innerText = `© Copyright ${year}, Mads Sø
 const greetingSpan = document.getElementById("greeting");
 const date = new Date();
 if (date.getHours() > 6 && date.getHours() < 10) {
-  greetingSpan.innerText = "Good morning 🌄☕";
+  greetingSpan.innerText = "Good morning";
 } else if (date.getHours() < 18) {
-  greetingSpan.innerText = "Hi👋";
-} else if (date.getHours() < 22) {
-  greetingSpan.innerText = "Good evening 🌆";
+  greetingSpan.innerText = "Hi";
+} else if (date.getHours() < 24) {
+  greetingSpan.innerText = "Good evening";
 } else {
-  greetingSpan.innerText = "Hey night owl 🦉";
+  greetingSpan.innerText = "Hey night owl";
 }
 
 const typedOutSpan = document.getElementById("typed-out");
-const texts = ["a Software Developer.", "a Student.", "Chess enthusiast."]
+const texts = [
+  "a Software Developer.",
+  "a Board Game Hobbyist.",
+  "a Nature Enthusiast.",
+  "an Avid Reader.",
+]
 
 let i = 0;
 let wordIndex = 0;
-let speed = 100;
+let typingDelay = 60;
+const timeBetweenWords = 2700;
+
 function writeText(text) {
   if (i < text.length) {
     typedOutSpan.innerHTML += text.charAt(i);
     i++;
-    setTimeout(writeText, speed, text);
+    setTimeout(writeText, typingDelay, text);
   } else {
     if (wordIndex === texts.length - 1) wordIndex = 0;
     else wordIndex++;
     document.getElementById("text-cursor").classList.add("text-cursor-blink");
-    setTimeout(deleteText, 5000); 
+    setTimeout(deleteText, timeBetweenWords);
   }
 };
 
@@ -160,7 +167,7 @@ function deleteText() {
   if (i > 0) {
     typedOutSpan.innerHTML = typedOutSpanText.substring(0, i - 1);
     i--;
-    setTimeout(deleteText, speed / 2, typedOutSpanText);
+    setTimeout(deleteText, typingDelay / 2, typedOutSpanText);
   } else {
 
     writeText(texts[wordIndex]);
