@@ -138,6 +138,7 @@ if (date.getHours() > 6 && date.getHours() < 10) {
 const typedOutSpan = document.getElementById("typed-out");
 const texts = [
   "a Software Developer.",
+  "a CS Student.",
   "a Board Game Enthusiast.",
   "a Nature Enjoyer.",
   "an Avid Reader.",
@@ -145,33 +146,44 @@ const texts = [
 
 let i = 0;
 let wordIndex = 0;
-let typingDelay = 60;
-const timeBetweenWords = 2700;
+let typingDelays = [60, 80, 100];
+const timeBetweenDeletingWords = 2700;
+const timeBetweenWritingWords = 1400;
 
 function writeText(text) {
   if (i < text.length) {
     typedOutSpan.innerHTML += text.charAt(i);
     i++;
+    const typingDelay = typingDelays[Math.floor(Math.random() * typingDelays.length)];
     setTimeout(writeText, typingDelay, text);
   } else {
     if (wordIndex === texts.length - 1) wordIndex = 0;
     else wordIndex++;
-    document.getElementById("text-cursor").classList.add("text-cursor-blink");
-    setTimeout(deleteText, timeBetweenWords);
+    toggleCursorBlink();
+    setTimeout(() => {
+      toggleCursorBlink();
+      deleteText();
+    }, timeBetweenDeletingWords);
   }
 };
 
 function deleteText() {
-  document.getElementById("text-cursor").classList.remove("text-cursor-blink");
   const typedOutSpanText = typedOutSpan.innerText;
   if (i > 0) {
     typedOutSpan.innerHTML = typedOutSpanText.substring(0, i - 1);
     i--;
-    setTimeout(deleteText, typingDelay / 2, typedOutSpanText);
+    setTimeout(deleteText, typingDelays[0] / 2, typedOutSpanText);
   } else {
-
-    writeText(texts[wordIndex]);
+    toggleCursorBlink();
+    setTimeout(() => {
+      toggleCursorBlink();
+      writeText(texts[wordIndex]);
+    }, timeBetweenWritingWords);
   }
+}
+
+function toggleCursorBlink() {
+  document.getElementById("text-cursor").classList.toggle("text-cursor-blink");
 }
 
 writeText(texts[wordIndex]);
