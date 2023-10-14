@@ -187,3 +187,20 @@ function toggleCursorBlink() {
 }
 
 writeText(texts[wordIndex]);
+
+/*NAVBAR*/
+const navbar = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger");
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("nav-active");
+  hamburger.classList.toggle("nav-active");
+});
+
+const navLinks = document.querySelectorAll("#nav-links a");
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    navbar.classList.remove("nav-active");
+    hamburger.classList.remove("nav-active");
+  })
+}
