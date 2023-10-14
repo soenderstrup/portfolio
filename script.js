@@ -121,9 +121,9 @@ window.onscroll = () => {
     }
   }
 
-  if (
-    document.body.scrollTop > pixels ||
-    document.documentElement.scrollTop > pixels
+  /*if (document.body.clientWidth > 950 && 
+    (document.body.scrollTop > pixels ||
+    document.documentElement.scrollTop > pixels)
   ) {
     if (!header.classList.contains("sticky")) {
       header.classList.add("sticky");
@@ -139,7 +139,7 @@ window.onscroll = () => {
       }, 500);
       removingSticky = true;
     }
-  }
+  }*/
 };
 
 /*COPYRIGHT*/
@@ -225,7 +225,7 @@ let pixels = header.offsetHeight;
 // Fixing default scroll position bug
 for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click", (e) => {
-    e.preventDefault();
+    /*e.preventDefault();
     const href = e.target.getAttribute("href");
     let target = document.querySelector(href);
     let targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
@@ -238,7 +238,7 @@ for (let i = 0; i < navLinks.length; i++) {
     window.scrollTo({
       top: targetPosition,
       behavior: "smooth",
-    });
+    });*/
     navbar.classList.remove("nav-active");
     hamburger.classList.remove("nav-active");
   })
