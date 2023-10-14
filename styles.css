@@ -483,7 +483,7 @@ textarea {
 }
 
 /*MEDIA QUERIES*/
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   :root {
     --h2-fs: 8vw;
     --container-spacing: 2rem;
@@ -497,7 +497,7 @@ textarea {
     background-color: var(--white);
     transform: translateY(-100vh);
     z-index: 1;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   #navbar.nav-active {
@@ -511,12 +511,13 @@ textarea {
   #nav-links {
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 500px;
     justify-content: space-evenly;
   }
 
   #nav-links a {
     color: var(--primary-color);
+    font-size: 1.8rem;
   }
 
   #hamburger {
