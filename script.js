@@ -192,7 +192,7 @@ writeText(texts[wordIndex]);
 const navbar = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger");
 hamburger.addEventListener("click", () => {
-  navbar.classList.toggle("nav-active");
+  // navbar.classList.toggle("nav-active");
   hamburger.classList.toggle("nav-active");
 });
 
