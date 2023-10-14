@@ -531,15 +531,14 @@ textarea {
   }
 
   #hamburger.nav-active > div {
-    /*background-color: var(--primary-color);*/
+    background-color: var(--primary-color);
   }
   
-  #hamburger-line-1, #hamburger-line-2 {
+  #hamburger-line-1, #hamburger-line-2, #hamburger-line-3 {
     position: relative;
     height: 3px;
     background-color: var(--white);
-    transition: width .2s ease .4s,top .2s ease .2s,transform .2s ease,background-color .6s ease;
-    transition: width .2s ease .4s,top .2s ease .2s,transform .2s ease,background-color .6s ease,-webkit-transform .2s ease
+    transition: width .2s ease .4s,top .2s ease .2s,transform .2s ease, background-color .2s ease .2s;
   }
   
   #hamburger-line-1 {
@@ -550,22 +549,35 @@ textarea {
   #hamburger-line-2 {
     top: 25px;
     width: 30px;
+    transition: width .2s ease .4s, opacity .2s ease .2s;
+  }
+
+  #hamburger-line-3 {
+    top: 30px;
+    width: 20px;
+    opacity: 1;
   }
 
   #hamburger.nav-active #hamburger-line-1 {
-    top: 22.5px;
+    top: 28px;
     width: 40px;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s,background-color .6s ease;
+    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s;
 }
 
 #hamburger.nav-active #hamburger-line-2 {
-    top: 19.5px;
+  width: 40px;
+  opacity: 0;
+  transition: width .2s ease,top .2s ease .2s, opacity .2s ease .2s;
+}
+
+#hamburger.nav-active #hamburger-line-3 {
+    top: 22px;
     width: 40px;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s,background-color .6s ease;
+    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s;
 }
 
   #name {
