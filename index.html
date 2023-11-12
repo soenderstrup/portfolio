@@ -1,178 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <script src="script.js" defer></script>
-    <title>Mads Sønderstrup-Jensen</title>
-  </head>
-  <body>
-    <!--NAVBAR-->
-    <nav id="navbar">
-      <div id="links">
-        <button id="linked-in" class="icon">
-          <i class="fab fa-linkedin fa-fw"></i>
-        </button>
-        <button id="github" class="icon">
-          <i class="fab fa-github fa-fw"></i>
-        </button>
-      </div>
-    </nav>
-
-    <!--HERO-->
-    <div id="hero">
-      <div id="hero-text">
-        <h1>
-          <span id="greeting"></span>👋, I'm Mads,
-          <br />
-          <span id="typed-out" class="span-bold"></span>
-          <div id="text-cursor"></div>
-        </h1>
-      </div>
-    </div>
-
-    <div id="about-skills">
-      <!--ABOUT ME-->
-      <div id="about">
-        <h2 class="section-header">ABOUT ME</h2>
-        <div id="about-text">
-          <p>
-            I'm pursuing a degree in software engineering (datamatiker), and I'm
-            currently in my third semester at Aarhus Business Academy.
-            <br />
-            <br />
-            I'm enthusiastic about putting my skills to practical use by
-            developing robust software solutions in real world applications.
-            <br />
-            <br />
-            I'm a quick learner and I'm dedicated to self-improvement. I have a
-            passion for finding optimal solutions to problems. <br />
-            <br />
-            I'm ready to take on new challenges and embrace responsibility. I
-            take pleasure in learning new technologies to broaden my knowledge
-            in the field.
-          </p>
-        </div>
-      </div>
-      <!--SKILLS-->
-      <div id="skills-wrapper">
-        <div id="skills">
-          <h2 class="section-header">SKILLS</h2>
-          <div id="skills-flex">
-            <div>
-              <h3>Software</h3>
-              <ul>
-                <li>Java</li>
-                <li>.NET/C#</li>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>React</li>
-                <li>Express</li>
-                <li>SQL</li>
-                <li>Git</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Responsive design</li>
-                <li>Scala</li>
-              </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="favicon/site.webmanifest" />
+        <script src="script.js" defer></script>
+        <title>Mads Sønderstrup-Jensen</title>
+    </head>
+    <body>
+        <!--NAVBAR-->
+        <nav id="navbar">
+            <div id="links">
+                <button id="linked-in" class="icon">
+                    <i class="fab fa-linkedin fa-fw"></i>
+                </button>
+                <button id="github" class="icon">
+                    <i class="fab fa-github fa-fw"></i>
+                </button>
             </div>
-            <div>
-              <h3>Personal</h3>
-              <ul>
-                <li>Social</li>
-                <li>Communicative</li>
-                <li>Hard working</li>
-                <li>Problem Solving</li>
-                <li>Logical thinking</li>
-                <li>Structured</li>
-                <li>Teamworking</li>
-                <li>Creative</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        </nav>
 
-    <!--PROJECTS-->
-    <div id="projects">
-      <h2 id="projects-header" class="section-header">PROJECTS</h2>
-      <p id="projects-description">
-        These are some of my web development projects. To see all my projects
-        check out
-        <a href="https://github.com/Mads-SJ" target="_blank">my Github page</a>.
-      </p>
-      <div id="projects-grid">
-        <div class="project">
-          <h3>This Portfolio</h3>
-          <p>
-            Made with HTML5, CSS3 and JavaScript, this responsive website
-            showcases some of my projects and skills as a software developer.
-          </p>
-          <button id="portfolio-github-btn" class="project-visit-btn">
-            Code
-          </button>
+        <!--HERO-->
+        <div id="hero">
+            <div id="hero-text">
+                <h1>
+                    <span id="greeting"></span>👋, I'm Mads,
+                    <br />
+                    <span id="typed-out" class="span-bold"></span>
+                    <div id="text-cursor"></div>
+                </h1>
+            </div>
         </div>
-        <div class="project">
-          <h3>Dice Roller</h3>
-          <p>
-            Made purely with HTML5, CSS3 and JavaScript, this responsive website
-            lets you simulate dice rolling, when you are in need of dice.
-          </p>
-          <div class="link-buttons">
-            <button id="dice-roller-btn" class="project-visit-btn">
-              Visit
-            </button>
-            <button id="dice-roller-github-btn" class="project-visit-btn">
-              Code
-            </button>
-          </div>
+
+        <div id="about-skills">
+            <!--ABOUT ME-->
+            <div id="about">
+                <h2 class="section-header">ABOUT ME</h2>
+                <div id="about-text">
+                    <p>
+                        I'm pursuing a degree in software engineering
+                        (datamatiker), and I'm currently in my third semester at
+                        Aarhus Business Academy.
+                        <br />
+                        <br />
+                        I'm enthusiastic about putting my skills to practical
+                        use by developing robust software solutions in real
+                        world applications.
+                        <br />
+                        <br />
+                        I'm a quick learner and I'm dedicated to
+                        self-improvement. I have a passion for finding optimal
+                        solutions to problems. <br />
+                        <br />
+                        I'm ready to take on new challenges and embrace
+                        responsibility. I take pleasure in learning new
+                        technologies to broaden my knowledge in the field.
+                    </p>
+                </div>
+            </div>
+            <!--SKILLS-->
+            <div id="skills-wrapper">
+                <div id="skills">
+                    <h2 class="section-header">SKILLS</h2>
+                    <div id="skills-flex">
+                        <div>
+                            <h3>Software</h3>
+                            <ul>
+                                <li>Java</li>
+                                <li>.NET/C#</li>
+                                <li>JavaScript</li>
+                                <li>Node.js</li>
+                                <li>React</li>
+                                <li>Express</li>
+                                <li>SQL</li>
+                                <li>Git</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Responsive design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Personal</h3>
+                            <ul>
+                                <li>Social</li>
+                                <li>Communicative</li>
+                                <li>Hard working</li>
+                                <li>Problem Solving</li>
+                                <li>Logical thinking</li>
+                                <li>Structured</li>
+                                <li>Teamworking</li>
+                                <li>Creative</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project">
-          <h3>Reaction Time</h3>
-          <p>
-            Made purely with HTML5, CSS3 and JavaScript, this responsive website
-            lets you measure your reaction time and compare it to others. I used
-            Express.js and MongoDB for the backend which is not deployed at the
-            moment.
-          </p>
-          <div class="link-buttons">
-            <button id="reaction-time-btn" class="project-visit-btn">
-              Visit
-            </button>
-            <button id="reaction-time-github-btn" class="project-visit-btn">
-              Code
-            </button>
-          </div>
-        </div>
-        <!--<div class="project">
+
+        <!--PROJECTS-->
+        <div id="projects">
+            <h2 id="projects-header" class="section-header">PROJECTS</h2>
+            <p id="projects-description">
+                These are some of my web development projects. To see all my
+                projects check out
+                <a href="https://github.com/Mads-SJ" target="_blank"
+                    >my Github page</a
+                >.
+            </p>
+            <div id="projects-grid">
+                <div class="project">
+                    <h3>This Portfolio</h3>
+                    <p>
+                        Made with HTML5, CSS3 and JavaScript, this responsive
+                        website showcases some of my projects and skills as a
+                        software developer.
+                    </p>
+                    <button id="portfolio-github-btn" class="project-visit-btn">
+                        Code
+                    </button>
+                </div>
+                <div class="project">
+                    <h3>Dice Roller</h3>
+                    <p>
+                        Made purely with HTML5, CSS3 and JavaScript, this
+                        responsive website lets you simulate dice rolling, when
+                        you are in need of dice.
+                    </p>
+                    <div class="link-buttons">
+                        <button id="dice-roller-btn" class="project-visit-btn">
+                            Visit
+                        </button>
+                        <button
+                            id="dice-roller-github-btn"
+                            class="project-visit-btn"
+                        >
+                            Code
+                        </button>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3>Reaction Time</h3>
+                    <p>
+                        Made purely with HTML5, CSS3 and JavaScript, this
+                        responsive website lets you measure your reaction time
+                        and compare it to others. I used Express.js and MongoDB
+                        for the backend which is not deployed at the moment.
+                    </p>
+                    <div class="link-buttons">
+                        <button
+                            id="reaction-time-btn"
+                            class="project-visit-btn"
+                        >
+                            Visit
+                        </button>
+                        <button
+                            id="reaction-time-github-btn"
+                            class="project-visit-btn"
+                        >
+                            Code
+                        </button>
+                    </div>
+                </div>
+                <!--<div class="project">
           <h3>Weather app</h3>
           <p>
             Made with the well-known frontend framework React and using a
@@ -188,163 +203,205 @@
             </button>
           </div>
         </div>-->
-        <div class="project">
-          <h3>Todo app</h3>
-          <p>
-            A simple todo-list made in React using material UI where you can
-            write down, cross out and delete tasks using local storage.
-          </p>
-          <div class="link-buttons">
-            <button id="todo-app-btn" class="project-visit-btn">Visit</button>
-            <button id="todo-app-github-btn" class="project-visit-btn">
-              Code
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <h3>Tip Calculator</h3>
-          <p>
-            This was a frontend development challenge from
-            <a href="https://www.frontendmentor.io/" target="_blank"
-              >www.frontendmentor.io</a
-            >
-            to improve my basic frontend skills.
-          </p>
-          <div class="link-buttons">
-            <button id="tip-calculator-btn" class="project-visit-btn">
-              Visit
-            </button>
-            <button id="tip-calculator-github-btn" class="project-visit-btn">
-              Code
-            </button>
-          </div>
-        </div>
-        <div class="project">
-          <h3>Birthday Countdown</h3>
-          <p>
-            My very first web development project using HTML5, CSS3 and plain
-            JavaScript.
-          </p>
-          <div class="link-buttons">
-            <button id="countdown-btn" class="project-visit-btn">Visit</button>
-            <button id="countdown-github-btn" class="project-visit-btn">
-              Code
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--EXPERINCE-->
-    <div id="experience">
-      <div class="line"></div>
-      <h2 id="experience-header" class="section-header">EXPERIENCE</h2>
-      <div id="exp-slideshow">
-        <button id="prev" class="slide-btn" onclick="changeSlide(-1)">
-          &#10094;
-        </button>
-        <div class="slide">
-          <h3>
-            Student Software Developer
-            <span class="date">2023-present</span>
-            <span class="location"><i>Prochimp</i></span>
-          </h3>
-          <ul>
-            <li>
-              Developing solutions in C# and .NET, both frontend and backend
-            </li>
-          </ul>
-        </div>
-        <div class="slide">
-          <h3>
-            Student Software Developer
-            <span class="date">2022-2023</span>
-            <span class="location"><i>BE-terna Denmark</i></span>
-          </h3>
-          <ul>
-            <li>Developing websites for various clients</li>
-            <li>
-              Consulting work and developing solutions in the Microsoft Power
-              Platform environment
-            </li>
-          </ul>
-        </div>
-        <div class="slide">
-          <h3>
-            Instructor - Introduction to Programming
-            <span class="date">2021</span>
-            <span class="location"><i>Aarhus University</i></span>
-          </h3>
-          <ul>
-            <li>Teaching Java to first-year computer science students</li>
-            <li>Debugging and correcting programming assignments</li>
-          </ul>
-          <p>
-            This has enhanced my ability to convey theoretical challenges,
-            providing me with a deeper understanding of programming.
-          </p>
-        </div>
-        <div class="slide">
-          <h3>
-            Warehouse Employee
-            <span class="date">2020</span>
-            <span class="location"><i>Brdr. Kier, Hasselager</i></span>
-          </h3>
-          <ul>
-            <li>Packing and picking shipments of metal pipes</li>
-            <li>Loading trucks using remote-controlled cranes</li>
-          </ul>
-          <p>
-            This has taught me the importance of structured and independent
-            work.
-          </p>
-        </div>
-        <div class="slide">
-          <h3>
-            Waiter
-            <span class="date">2019-2020</span>
-            <span class="location"><i>Kiin Kiin, Aarhus</i></span>
-          </h3>
-          <ul>
-            <li>Take orders and serve guests</li>
-            <li>I had to keep calm in stressful situations</li>
-          </ul>
-          <p>
-            This has taught me to be service-oriented and keep a positive
-            attitude no matter what.
-          </p>
-        </div>
-        <div class="slide">
-          <h3>
-            Substitute Teacher and pedagocial assistant
-            <span class="date">2018-2019</span>
-            <span class="location"><i>Odder Lille Friskole</i></span>
-          </h3>
-          <ul>
-            <li>
-              Taught children from grades 0 to 9 and conducted activities with
-              them in the after-school program.
-            </li>
-            <li>Was available for on-call assignments every morning.</li>
-          </ul>
-          <p>This has taught me to be adaptable, flexible, and patient.</p>
+                <div class="project">
+                    <h3>Todo app</h3>
+                    <p>
+                        A simple todo-list made in React using material UI where
+                        you can write down, cross out and delete tasks using
+                        local storage.
+                    </p>
+                    <div class="link-buttons">
+                        <button id="todo-app-btn" class="project-visit-btn">
+                            Visit
+                        </button>
+                        <button
+                            id="todo-app-github-btn"
+                            class="project-visit-btn"
+                        >
+                            Code
+                        </button>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3>Tip Calculator</h3>
+                    <p>
+                        This was a frontend development challenge from
+                        <a href="https://www.frontendmentor.io/" target="_blank"
+                            >www.frontendmentor.io</a
+                        >
+                        to improve my basic frontend skills.
+                    </p>
+                    <div class="link-buttons">
+                        <button
+                            id="tip-calculator-btn"
+                            class="project-visit-btn"
+                        >
+                            Visit
+                        </button>
+                        <button
+                            id="tip-calculator-github-btn"
+                            class="project-visit-btn"
+                        >
+                            Code
+                        </button>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3>Birthday Countdown</h3>
+                    <p>
+                        My very first web development project using HTML5, CSS3
+                        and plain JavaScript.
+                    </p>
+                    <div class="link-buttons">
+                        <button id="countdown-btn" class="project-visit-btn">
+                            Visit
+                        </button>
+                        <button
+                            id="countdown-github-btn"
+                            class="project-visit-btn"
+                        >
+                            Code
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <button id="next" class="slide-btn" onclick="changeSlide(1)">
-          &#10095;
-        </button>
-      </div>
-      <div id="dots">
-        <span class="dot" onclick="showSlide(0)"></span>
-        <span class="dot" onclick="showSlide(1)"></span>
-        <span class="dot" onclick="showSlide(2)"></span>
-        <span class="dot" onclick="showSlide(3)"></span>
-        <span class="dot" onclick="showSlide(4)"></span>
-        <span class="dot" onclick="showSlide(5)"></span>
-      </div>
-    </div>
+        <!--EXPERINCE-->
+        <div id="experience">
+            <div class="line"></div>
+            <h2 id="experience-header" class="section-header">EXPERIENCE</h2>
+            <div id="exp-slideshow">
+                <button id="prev" class="slide-btn" onclick="changeSlide(-1)">
+                    &#10094;
+                </button>
+                <div class="slide">
+                    <h3>
+                        Student Software Developer
+                        <span class="date">2023-present</span>
+                        <span class="location"><i>Prochimp</i></span>
+                    </h3>
+                    <ul>
+                        <li>
+                            Developing solutions in C# and .NET, both frontend
+                            and backend
+                        </li>
+                        <li>Working with the MAUI Blazor framework</li>
+                        <li>I am currently in between projects</li>
+                    </ul>
+                </div>
+                <div class="slide">
+                    <h3>
+                        Student Software Developer
+                        <span class="date">2022-2023</span>
+                        <span class="location"
+                            ><i>BE-terna Denmark, Aarhus</i></span
+                        >
+                    </h3>
+                    <ul>
+                        <li>Developing websites for various clients</li>
+                        <li>
+                            Consulting work and developing solutions in the
+                            Microsoft Power Platform environment
+                        </li>
+                    </ul>
+                    <p>
+                        This has given me valuable experience in working with
+                        clients and developing solutions in a professional
+                        environment.
+                    </p>
+                </div>
+                <div class="slide">
+                    <h3>
+                        Instructor - Introduction to Programming
+                        <span class="date">2021</span>
+                        <span class="location"><i>Aarhus University</i></span>
+                    </h3>
+                    <ul>
+                        <li>
+                            Teaching Java to first-year computer science
+                            students
+                        </li>
+                        <li>
+                            Debugging and correcting programming assignments
+                        </li>
+                    </ul>
+                    <p>
+                        This has enhanced my ability to convey theoretical
+                        challenges, providing me with a deeper understanding of
+                        programming.
+                    </p>
+                </div>
+                <div class="slide">
+                    <h3>
+                        Warehouse Employee
+                        <span class="date">2020</span>
+                        <span class="location"
+                            ><i>Brdr. Kier, Hasselager</i></span
+                        >
+                    </h3>
+                    <ul>
+                        <li>Packing and picking shipments of metal pipes</li>
+                        <li>Loading trucks using remote-controlled cranes</li>
+                    </ul>
+                    <p>
+                        This has taught me the importance of structured and
+                        independent work.
+                    </p>
+                </div>
+                <div class="slide">
+                    <h3>
+                        Waiter
+                        <span class="date">2019-2020</span>
+                        <span class="location"><i>Kiin Kiin, Aarhus</i></span>
+                    </h3>
+                    <ul>
+                        <li>Take orders and serve guests</li>
+                        <li>I had to keep calm in stressful situations</li>
+                    </ul>
+                    <p>
+                        This has taught me to be service-oriented and keep a
+                        positive attitude no matter what.
+                    </p>
+                </div>
+                <div class="slide">
+                    <h3>
+                        Substitute Teacher and pedagocial assistant
+                        <span class="date">2018-2019</span>
+                        <span class="location"
+                            ><i>Odder Lille Friskole</i></span
+                        >
+                    </h3>
+                    <ul>
+                        <li>
+                            Taught children from grades 0 to 9 and conducted
+                            activities with them in the after-school program.
+                        </li>
+                        <li>
+                            Was available for on-call assignments every morning.
+                        </li>
+                    </ul>
+                    <p>
+                        This has taught me to be adaptable, flexible, and
+                        patient.
+                    </p>
+                </div>
 
-    <!--CONTACT
+                <button id="next" class="slide-btn" onclick="changeSlide(1)">
+                    &#10095;
+                </button>
+            </div>
+            <div id="dots">
+                <span class="dot" onclick="showSlide(0)"></span>
+                <span class="dot" onclick="showSlide(1)"></span>
+                <span class="dot" onclick="showSlide(2)"></span>
+                <span class="dot" onclick="showSlide(3)"></span>
+                <span class="dot" onclick="showSlide(4)"></span>
+                <span class="dot" onclick="showSlide(5)"></span>
+            </div>
+        </div>
+
+        <!--CONTACT
     <div id="contact">
       <h2 id="contact-header" class="section-header">CONTACT ME</h2>
       <div id="contact-form">
@@ -388,7 +445,7 @@
       </div>
     </div>
     -->
-    <button id="top-btn"><i class="fas fa-angle-up"></i></button>
-    <p id="copyright"></p>
-  </body>
+        <button id="top-btn"><i class="fas fa-angle-up"></i></button>
+        <p id="copyright"></p>
+    </body>
 </html>
