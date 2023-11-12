@@ -29,6 +29,7 @@ html {
 
 body {
   background-color: var(--primary-color);
+  scroll-padding-top: 50vh;
 }
 
 .section-header {
@@ -47,6 +48,22 @@ body {
 }
 
 /*NAVBAR*/
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 10vh;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: 0.3s header-slide ease-in-out;
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -62,10 +79,25 @@ body {
   font-size: 2vw;
 }
 
+#nav-links a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 1rem;
+  transition: var(--hover-transition-duration) ease-in-out;
+}
+
+#nav-links a:hover {
+  transform: translateY(-3px);
+}
+
 .icon {
   background: transparent;
   color: var(--white);
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   border: none;
   border-radius: 20px;
@@ -80,13 +112,17 @@ body {
   background-color: var(--focus-primary-color);
 }
 
+#hamburger {
+  display: none;
+}
+
 /*HERO*/
 #hero {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   margin: 0 var(--container-spacing);
 
   overflow: hidden;
@@ -447,15 +483,110 @@ textarea {
 }
 
 /*MEDIA QUERIES*/
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   :root {
     --h2-fs: 8vw;
     --container-spacing: 2rem;
   }
 
-  #navbar {
-    justify-content: center;
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
+
+  #navbar {
+    position: fixed;
+    top: 0;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--white);
+    transform: translateY(-100vh);
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #navbar.nav-active {
+    transform: translateY(0);
+  }
+
+  #navbar .icon {
+    color: var(--primary-color);
+  }
+
+  #nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-evenly;
+  }
+
+  #nav-links a {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+  }
+
+  #hamburger {
+    display: block;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    padding-left: 10px;
+    margin: 20px;
+  }
+
+  #hamburger.nav-active > div {
+    background-color: var(--primary-color);
+  }
+  
+  #hamburger-line-1, #hamburger-line-2, #hamburger-line-3 {
+    position: relative;
+    height: 3px;
+    background-color: var(--white);
+    transition: width .2s ease .4s,top .2s ease .2s,transform .2s ease, background-color .2s ease .2s;
+  }
+  
+  #hamburger-line-1 {
+    top: 15px;
+    width: 40px;
+  }
+  
+  #hamburger-line-2 {
+    top: 20px;
+    width: 30px;
+    transition: width .2s ease .4s, opacity .2s ease .2s;
+  }
+
+  #hamburger-line-3 {
+    top: 25px;
+    width: 20px;
+    opacity: 1;
+  }
+
+  #hamburger.nav-active #hamburger-line-1 {
+    top: 23px;
+    width: 40px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s;
+}
+
+#hamburger.nav-active #hamburger-line-2 {
+  width: 40px;
+  opacity: 0;
+  transition: width .2s ease,top .2s ease .2s, opacity .2s ease .2s;
+}
+
+#hamburger.nav-active #hamburger-line-3 {
+    top: 17px;
+    width: 40px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition: width .2s ease,top .2s ease .2s,transform .2s ease .4s;
+}
 
   #name {
     display: none;
@@ -468,8 +599,7 @@ textarea {
   #hero {
     flex-direction: column;
     justify-content: center;
-
-    overflow: unset;
+    height: 100vh;
   }
 
   #hero-img {
@@ -602,6 +732,24 @@ textarea {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes header-slide {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes header-slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }
 

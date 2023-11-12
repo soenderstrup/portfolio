@@ -94,6 +94,7 @@ function showSlide(index) {
 }
 
 /*BACK TO TOP BUTTON*/
+const header = document.querySelector("header");
 const topBtn = document.getElementById("top-btn");
 
 topBtn.addEventListener("click", () => {
@@ -101,6 +102,8 @@ topBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
 
+
+let removingSticky = false;
 window.onscroll = () => {
   const pixels = 1080;
   if (
@@ -117,6 +120,26 @@ window.onscroll = () => {
       setTimeout(() => (topBtn.style.display = "none"), 250);
     }
   }
+
+  /*if (document.body.clientWidth > 950 && 
+    (document.body.scrollTop > pixels ||
+    document.documentElement.scrollTop > pixels)
+  ) {
+    if (!header.classList.contains("sticky")) {
+      header.classList.add("sticky");
+    }
+  } else {
+    
+    if (header.classList.contains("sticky") && !removingSticky) {
+      header.style.animation = "0.3s header-slide-out ease-in-out forwards";
+      setTimeout(() => {
+        header.style.animation = "";
+        header.classList.remove("sticky");
+        removingSticky = false;
+      }, 500);
+      removingSticky = true;
+    }
+  }*/
 };
 
 /*COPYRIGHT*/
@@ -187,3 +210,37 @@ function toggleCursorBlink() {
 }
 
 writeText(texts[wordIndex]);
+
+/*NAVBAR*/
+const navbar = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger");
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("nav-active");
+  hamburger.classList.toggle("nav-active");
+});
+
+const navLinks = document.querySelectorAll("#nav-links a");
+let pixels = header.offsetHeight;
+
+// Fixing default scroll position bug
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", (e) => {
+    /*e.preventDefault();
+    const href = e.target.getAttribute("href");
+    let target = document.querySelector(href);
+    let targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    let bodyWidth = document.body.clientWidth;
+    // subtract pixels if nothing of the following is true the screen is mobile and the href is #about or if the screen is desktop and the href is #about or #skills
+    if (!(bodyWidth < 768 && href === "#about") && !(bodyWidth > 768 && (href === "#about" || href === "#skills"))) {
+      targetPosition -= pixels;
+    }
+    
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });*/
+    navbar.classList.remove("nav-active");
+    hamburger.classList.remove("nav-active");
+  })
+}
+
