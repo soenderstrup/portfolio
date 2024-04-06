@@ -1,13 +1,10 @@
 /*NAVBAR*/
 document.getElementById("linked-in").onclick = function () {
-  window.open(
-    "https://www.linkedin.com/in/mads-sj/",
-    "_blank"
-  );
+  window.open("https://www.linkedin.com/in/mads-sj/", "_blank");
 };
 
 document.getElementById("github").onclick = function () {
-  window.open("https://github.com/Mads-SJ", "_blank");
+  window.open("https://github.com/soenderstrup", "_blank");
 };
 
 /*PROJECTS*/
@@ -39,31 +36,31 @@ document.getElementById("countdown-btn").onclick = function () {
 };
 
 document.getElementById("portfolio-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/portfolio", "_blank");
+  window.open("https://github.com/soenderstrup/portfolio", "_blank");
 };
 
 document.getElementById("dice-roller-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/dice-roller", "_blank");
+  window.open("https://github.com/soenderstrup/dice-roller", "_blank");
 };
 
 document.getElementById("reaction-time-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/reaction-time", "_blank");
+  window.open("https://github.com/soenderstrup/reaction-time", "_blank");
 };
 
 /*document.getElementById("weather-app-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/react-weather-app", "_blank");
+  window.open("https://github.com/soenderstrup/react-weather-app", "_blank");
 };*/
 
 document.getElementById("todo-app-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/todo-react-app", "_blank");
+  window.open("https://github.com/soenderstrup/todo-react-app", "_blank");
 };
 
 document.getElementById("tip-calculator-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/tip-calculator", "_blank");
+  window.open("https://github.com/soenderstrup/tip-calculator", "_blank");
 };
 
 document.getElementById("countdown-github-btn").onclick = function () {
-  window.open("https://github.com/Mads-SJ/birthday-countdown", "_blank");
+  window.open("https://github.com/soenderstrup/birthday-countdown", "_blank");
 };
 
 /*SLIDESHOW*/
@@ -101,7 +98,6 @@ topBtn.addEventListener("click", () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
-
 
 let removingSticky = false;
 window.onscroll = () => {
@@ -144,7 +140,9 @@ window.onscroll = () => {
 
 /*COPYRIGHT*/
 const year = new Date().getFullYear();
-document.getElementById("copyright").innerText = `© Copyright ${year}, Mads Sønderstrup-Jensen`;
+document.getElementById(
+  "copyright"
+).innerText = `© Copyright ${year}, Mads Sønderstrup-Jensen`;
 
 const greetingSpan = document.getElementById("greeting");
 const date = new Date();
@@ -165,7 +163,7 @@ const texts = [
   "a Board Game Enthusiast.",
   "a Nature Enjoyer.",
   "an Avid Reader.",
-]
+];
 
 let i = 0;
 let wordIndex = 0;
@@ -177,7 +175,8 @@ function writeText(text) {
   if (i < text.length) {
     typedOutSpan.innerHTML += text.charAt(i);
     i++;
-    const typingDelay = typingDelays[Math.floor(Math.random() * typingDelays.length)];
+    const typingDelay =
+      typingDelays[Math.floor(Math.random() * typingDelays.length)];
     setTimeout(writeText, typingDelay, text);
   } else {
     if (wordIndex === texts.length - 1) wordIndex = 0;
@@ -188,7 +187,7 @@ function writeText(text) {
       deleteText();
     }, timeBetweenDeletingWords);
   }
-};
+}
 
 function deleteText() {
   const typedOutSpanText = typedOutSpan.innerText;
@@ -224,7 +223,7 @@ let pixels = header.offsetHeight;
 
 // Fixing default scroll position bug
 for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click", (e) => {
+  navLinks[i].addEventListener("click", e => {
     /*e.preventDefault();
     const href = e.target.getAttribute("href");
     let target = document.querySelector(href);
@@ -241,6 +240,5 @@ for (let i = 0; i < navLinks.length; i++) {
     });*/
     navbar.classList.remove("nav-active");
     hamburger.classList.remove("nav-active");
-  })
+  });
 }
-
